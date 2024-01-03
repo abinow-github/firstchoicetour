@@ -1,3 +1,11 @@
+/////////preloader function
+var load=document.getElementById("preloader")
+      window.addEventListener("load",function(){
+        setTimeout(function () {
+         load.style.display = "none";
+        }, 500);
+      })
+      
 //////navbar fixed
 document.addEventListener('DOMContentLoaded', function () {
     const navbar = document.getElementById('headerNav');
@@ -90,15 +98,32 @@ function service(a) {
   }
   
 }
+//////speciality slider
+  $(document).ready(function(){
+    $('.speciality-slider').slick({
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        arrows: false,
+        dots: false,
+        pauseOnHover: false,
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 1
+            }
+        }, {
+            breakpoint: 520,
+            settings: {
+                slidesToShow: 1
+            }
+        }]
+    });
+  });
 
 
-/////////preloader function
-var load=document.getElementById("preloader")
-      window.addEventListener("load",function(){
-        setTimeout(function () {
-         load.style.display = "none";
-        }, 500);
-      })
+
 
 
   

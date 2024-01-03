@@ -148,6 +148,32 @@
     height: 50px;
     width: 100%;
     background-color: #4c91bc;
+
+    .container,.row{
+        height: 100%;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    a:hover{
+        color: white;
+    }
+    .contact-div{
+        height: 100%;
+        width: 100%;
+        justify-content: space-evenly;
+        align-items: center;
+        display: flex;
+    }
+    i{
+        color: white;
+    }
+    @media screen and (max-width:765px) {
+        .row .col-md-6:nth-child(1){
+            display: none;
+        }
+    }
 }
 header{
     position: relative;
@@ -414,7 +440,201 @@ header{
         width: 60px;
     }
 }
-/* ......................................................... section-3 ............................................. */
+/* ......................................................... section-3 END ............................................. */
+
+
+/* ............... section-4 ............ */
+.section-4{
+    .row{
+        background: linear-gradient(45deg, #084e7a, #4399d2);
+        border-radius: 10px;
+    }
+    .row .col-lg-5:nth-child(1){
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .text-div{/* text part */
+        .title{
+            color: white;
+        }
+        p{
+            color: #ffffffa3;
+        }
+    }
+    @media screen and (min-width:991px) {
+        .text-div{
+            width: 80%;
+        }
+    }
+    @media screen and (max-width:991px) {
+        .text-div{
+            text-align: center;
+        }
+    }
+    @media screen and (max-width:600px) {
+        .row{
+            width: 90%;
+            margin: auto;
+        }
+    }
+
+    .card-sliderr{/* Slider */
+        .section-1-2 .slick-slide {
+          margin: 0px 20px;
+      }
+      .logo-sldr .slick-track{
+        display: flex !important;
+        align-items: center;
+      }
+      .section-1-2 .slick-slide img {
+          width: 100%;
+      }
+      
+      .section-1-2 .slick-slider
+      {
+          position: relative;
+          display: block;
+          box-sizing: border-box;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+            user-select: none;
+          -webkit-touch-callout: none;
+          -khtml-user-select: none;
+          -ms-touch-action: pan-y;
+              touch-action: pan-y;
+          -webkit-tap-highlight-color: transparent;
+      }
+      
+      .section-1-2 .slick-list
+      {
+          position: relative;
+          display: block;
+          overflow: hidden;
+          margin: 0;
+          padding: 0;
+      }
+      .section-1-2 .slick-list:focus
+      {
+          outline: none;
+      }
+      .section-1-2 .slick-list.dragging
+      {
+          cursor: pointer;
+          cursor: hand;
+      }
+      
+      .section-1-2 .slick-slider .slick-track,
+      .section-1-2 .slick-slider .slick-list
+      {
+          -webkit-transform: translate3d(0, 0, 0);
+             -moz-transform: translate3d(0, 0, 0);
+              -ms-transform: translate3d(0, 0, 0);
+               -o-transform: translate3d(0, 0, 0);
+                  transform: translate3d(0, 0, 0);
+      }
+      
+      .section-1-2 .slick-track
+      {
+          position: relative;
+          top: 0;
+          left: 0;
+          display: block;
+      }
+      .section-1-2 .slick-track:before,
+      .section-1-2 .slick-track:after
+      {
+          display: table;
+          content: '';
+      }
+      .section-1-2 .slick-track:after
+      {
+          clear: both;
+      }
+      .section-1-2 .slick-loading .slick-track
+      {
+          visibility: hidden;
+      }
+      
+      .section-1-2 .slick-slide
+      {
+          display: none;
+          float: left;
+          height: 100%;
+          min-height: 1px;
+          padding: 10px;
+      }
+      [dir='rtl'].slick-slide
+      {
+          float: right;
+      }
+      .section-1-2 .slick-slide img
+      {
+          display: block;
+      }
+      .section-1-2 .slick-slide.slick-loading img
+      {
+          display: none;
+      }
+      .section-1-2 .slick-slide.dragging img
+      {
+          pointer-events: none;
+      }
+      .section-1-2 .slick-initialized .slick-slide
+      {
+          display: block;
+      }
+      .section-1-2 .slick-loading .slick-slide
+      {
+          visibility: hidden;
+      }
+      .section-1-2 .slick-vertical .slick-slide
+      {
+          display: block;
+          height: auto;
+          border: 1px solid transparent;
+      }
+      .section-1-2 .slick-arrow.slick-hidden {
+          display: none;
+      }/* end common styles */
+      .card{
+        width: 300px;
+        margin: auto;
+      }
+      .img-div{
+        width: 100%;
+        height: 170px;
+        overflow: hidden;
+      }
+      .card-body{
+        position: relative;
+      }
+      .card-text{
+        color: #6a6e7a;
+      }
+      .name{
+        color: brown;
+      }
+      .pos-abs-div{
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        background: linear-gradient(45deg, #084e7a, #4399d2);
+        border-radius: 50%;
+        padding: 8px;
+        top: -30px;
+      }
+      @media screen and (max-width:750px) {
+        .card{
+            width: 100%;
+        }
+      }
+    }
+    
+}
+/* ......................................................... section-4 END ............................................. */
 
 
 
