@@ -1,0 +1,402 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
+:root{
+    --primary_clr:#05578b;
+    --brown_clr: brown;
+}
+/* ..................................... common styles ................................................ */
+*{
+    font-family: 'Roboto Slab', serif;
+}
+.title{
+    color: var(--primary_clr);
+}
+.sub-title{
+    color: var(--brown_clr);
+}
+.section-1,.section-2,.section-3,.section-4,.section-5,.section-6,.section-7{
+    padding: 80px 0;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: white;
+}
+footer{
+    position: relative;
+}
+.bg-white{
+    background-color: white;
+}
+
+/* ..................................... animations ................................................ */
+@keyframes top-bottom{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-20px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+@keyframes height-top-bottom{
+    0%{
+        height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transform: translateY(-20px);
+    }
+    100%{
+        transform: translateY(0);
+        overflow: hidden;
+        height: 100px;
+        opacity: 1;
+    }
+    }
+
+
+/* ............... preloader ............ */
+#preloader{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 10000;
+    background-color: white;
+    background: #fff  url(../gif/plane-2.gif) no-repeat center center;
+    background-size: 30%;
+}
+/* ......................................................... preloader ............................................. */
+
+
+/* ............... header ............ */
+header{
+    position: relative;
+    height: fit-content;
+    width: 100%;
+    overflow: hidden;
+    /* background: linear-gradient(181deg, rgb(219 199 171) 0%, rgba(209,171,107,1) 100%); */
+
+    .navbar{/* navbar */
+        background-color: white;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        .nav-item{
+            display: flex;
+            align-items: center;
+        }
+         .nav-link{
+            color: black;
+        }
+        .lg-nav-img{
+            height: 70px;
+            transition: 0.4s;
+        }
+    }
+    .navbar.scrolled{
+        position: fixed;
+        top: 0;
+        .lg-nav-img{
+            height: 50px;
+        }
+    }
+    .dropdown-menu.show{
+        animation: height-top-bottom 0.3s ;
+    }
+    .dropdown-menu[data-bs-popper] {
+        top: 81%;
+    }
+    @media screen and (max-width:990px) {
+        .navbar{
+            .nav-item.dropdown{
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    }
+
+
+    .banner{/* header-banner */
+        height: 56vh;
+        margin-top: 50px;
+        position: relative;
+        .container,.row{
+            height: 100%;
+        }
+        .headr-bg-img{
+            position: fixed;
+            width: 100%;
+            z-index: 0;
+            left: 0;
+        }
+        
+
+        .pos-abs-bg{/* dark background */
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            background-color: rgb(5 77 121 / 58%);
+        }
+        .pos-abs-bg .banner-title{
+            bottom: 0;
+            background-color: white;
+            padding: 10px 30px;
+            border-radius: 10px 10px 0 0;
+            position: absolute;
+            color: brown;
+        }
+        .pos-abs-bg .banner-title a{
+            text-decoration: none;
+            color: brown;
+        }
+    }
+    @media screen and (min-width:1000px) {
+        .headr-bg-img{
+            top: -90px;
+        }
+    }
+    @media screen and (min-width:765px) {
+        .pos-abs-bg .banner-title{
+            left: 20%;
+        }
+    }
+    @media screen and (max-width:765px) {
+        .banner{
+            margin-top: 100px;
+            text-align: center;
+            background-size: contain;
+        }
+        .pos-abs-bg{
+            display: flex;
+            justify-content: center;
+        }
+    }
+    @media screen and (max-width:500px) {
+        .banner{
+            height: 35vh;
+        }
+    }
+    
+    
+
+    
+}
+/* ......................................................... header ............................................. */
+
+/* ............... section-1 ............ */
+.section-1{
+    .col-lg-6{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .container p{
+        transform: translateY(50px);
+        opacity: 0;
+        transition: 0.7s;
+    }
+    .container.animated p{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    .img{
+        width: 80%;
+    }
+    @media screen and (max-width:760px) {
+        .row{
+            flex-direction: column-reverse;
+        }
+        .img{
+            margin-bottom: 20px;
+        }
+    }
+}
+/* ......................................................... section-1 ............................................. */
+
+
+
+
+
+
+
+
+/*............... footer ..........................*/
+footer{
+    background-color: #388ec4;
+  
+    .img-div{
+      width: 50%;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0);
+      margin: auto;
+    }
+
+    hr{
+        color: brown;
+        opacity: 100%;
+    }
+    .anime hr{
+        width: 0;
+        transition: 0.5s;
+    }
+    .anime.animated hr{
+        width: 60px;
+    }
+    
+    a{
+      text-decoration: none;
+      transition: 0.4s;
+    }
+    a:hover{
+      margin-left: 10px;
+    }
+    @media screen and (max-width:760px) {
+        .img-div{
+            width: 30%;
+        }
+    }
+  }
+  footer .footer-cnts{
+    transform: translateY(50px);
+    opacity: 0;
+    transition: 0.5s;
+  }
+  footer.animated .footer-cnts{
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+
+  /* whatsapp and call buttons */
+  
+  .call-btn,.whatsapp-btn{
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    color: white;
+    text-decoration: none;
+    left: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-50px);
+    opacity: 0;
+    transition: 0.4s;
+    i{
+        color: white;
+    }
+  }
+  .call-btn.scrolled,.whatsapp-btn.scrolled{
+    transform: translateX(0);
+    opacity: 1;
+  }
+  .call-btn{
+    background-color: var(--primary_clr);
+    bottom: 20px;
+    font-size: 25px;
+  }
+  .whatsapp-btn{
+    background-color: rgb(31, 206, 31);
+    bottom: 90px;
+    font-size: 30px;
+  }
+
+
+
+
+
+  /* ...................................... blog.html ............................................ */
+  .blog-section{
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 1200px;
+        margin-block: 2rem;
+        gap: 2rem;
+      }
+      
+      img {
+        max-width: 100%;
+        display: block;
+        object-fit: cover;
+      }
+      
+      .card {
+        display: flex;
+        flex-direction: column;
+        width: clamp(20rem, calc(20rem + 2vw), 22rem);
+        overflow: hidden;
+        box-shadow: 0 .1rem 1rem rgba(0, 0, 0, 0.1);
+        border-radius: 1em;
+        background: #ECE9E6;
+      background: linear-gradient(to right, #FFFFFF, #ECE9E6);
+      
+      }
+      
+      
+      
+      .card__body {
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+      }
+      
+      
+      .tag {
+        align-self: flex-start;
+        padding: .25em .75em;
+        border-radius: 1em;
+        font-size: .75rem;
+      }
+      
+      .tag + .tag {
+        margin-left: .5em;
+      }
+      
+      .tag-blue {
+        background: #56CCF2;
+      background: linear-gradient(to bottom, #2F80ED, #56CCF2);
+        color: #fafafa;
+      }
+      
+      .tag-brown {
+        background: #D1913C;
+      background: linear-gradient(to bottom, #FFD194, #D1913C);
+        color: #fafafa;
+      }
+      
+      .tag-red {
+        background: #cb2d3e;
+      background: linear-gradient(to bottom, #ef473a, #cb2d3e);
+        color: #fafafa;
+      }
+      
+      .card__body h4 {
+        font-size: 1.5rem;
+        text-transform: capitalize;
+      }
+      
+      .card__footer {
+        display: flex;
+        padding: 1rem;
+        margin-top: auto;
+      }
+      
+      .user {
+        display: flex;
+        gap: .5rem;
+      }
+      
+      .user__image {
+        border-radius: 50%;
+      }
+      
+      .user__info > small {
+        color: #666;
+      }
+  }
